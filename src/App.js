@@ -54,13 +54,13 @@ function App() {
         <Navbar title="TextUtils" Mode={Mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <div className="container my-3">
-          <Routes>
-            <Route exact  path="/about" element={<About />} />
-            <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter your text here to analyze" Mode={Mode} toggleMode={toggleMode} />} />
+          <Routes> 
+            <Route exact  path="/about" element={<About Mode={Mode}/>} /> 
+            <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter your text here to analyze" Mode={Mode} toggleMode={toggleMode} /> } />
           </Routes>
           {/* <About/>  */}
         </div>
-      </Router>
+       </Router>
     </>
   );
 }
